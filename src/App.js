@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import * as mdb from 'mdb-ui-kit';
+window.mdb = mdb;
 
 function App() {
   return (
