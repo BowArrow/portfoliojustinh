@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import firebase from 'firebase/database';
 import FrontPage from '../src/components/FrontPage';
-import { MDBContainer, MDBRow, MDBCol } from 'mdbreact';
+import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 import './App.css'
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 class App extends Component {
   state = {
