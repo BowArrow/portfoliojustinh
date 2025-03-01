@@ -1,7 +1,9 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import firebase from 'firebase/database';
+import FrontPage from './components/FrontPage';
+import { MDBContainer, MDBRow, MDBCol } from 'mdbreact';
 import './App.css';
-import * as mdb from 'mdb-ui-kit';
-window.mdb = mdb;
+
 
 function App() {
   return (
