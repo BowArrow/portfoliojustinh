@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { MDBContainer, MDBRow } from "mdbreact";
+import { MDBRow } from "mdb-react-ui-kit";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from '../Home';
 import About from '../About';

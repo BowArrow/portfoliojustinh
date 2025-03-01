@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { MDBNavbar, MDBNavbarBrand, MDBContainer, MDBRow, MDBCol, MDBDropdown, MDBDropdownItem, MDBDropdownMenu, MDBDropdownToggle, MDBNavbarToggler, MDBIcon, MDBCollapse, MDBNavbarNav, MDBNavItem } from 'mdbreact';
+import { MDBNavbar, MDBNavbarBrand, MDBContainer, MDBRow, MDBCol, MDBDropdown, MDBDropdownItem, MDBDropdownMenu, MDBDropdownToggle, MDBNavbarToggler, MDBIcon, MDBCollapse, MDBNavbarNav, MDBNavItem } from "mdb-react-ui-kit";
 import { Link } from 'react-router-dom';
 import './style.css';
 
