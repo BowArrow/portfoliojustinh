@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import firebase from 'firebase/database';
+import firebase from 'firebase/compat/app';
 import FrontPage from '../src/components/FrontPage';
 import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 import './App.css'
