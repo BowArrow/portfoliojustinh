@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { MDBRow } from "mdb-react-ui-kit";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from '../Home';
-import About from '../About';
-import Nav from '../Nav';
-import CollectionWrapper from '../CollectionWrapper';
+import Home from '../Home/index.jsx';
+import About from '../About/index.jsx';
+import Nav from '../Nav/index.jsx';
+import CollectionWrapper from '../CollectionWrapper/index.jsx';
 
 class FrontPage extends Component {
     state = {
