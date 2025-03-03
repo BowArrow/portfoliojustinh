@@ -1,11 +1,14 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap');
+
+#root {
+  margin: 0 0;
+  padding: 0 0;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+
+  min-height: 100vh;
+  min-width: 100vw;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,45 +16,226 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.fullscreen-element {
+  height: 100vh;
+  width: 100vw;
 }
-a:hover {
-  color: #535bf2;
+
+.navbar-collapse {
+  min-height: 111px;
+  min-width: 100vw !important;
+  margin-left: -12px;
+  margin-top: 4px;
+  padding-right: 0 !important;
+  border-bottom: 5px solid #002A41;
+  background-color: #C5C5C5 !important;
+}
+
+.navbar-collapse::before {
+  min-height: 111px;
+  min-width: 100vw;
+  padding-right: 0 !important;
+  border-bottom: 0px solid #002A41;
+  background-color: #C5C5C5 !important;
+}
+
+.about-container {
+  max-width: 1500px !important;
+}
+
+.navibar {
+  min-height: 111px;
+  padding: 0 35px !important;
+  min-width: 100vw !important;
+  border-bottom: 5px solid #002A41;
+  background-color: #C5C5C5 !important;
+}
+
+.instaitem {
+  width: 52px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-link {
+  font-family: 'Lato', sans-serif !important;
+  font-size: 20px !important;
+  min-width: 133px;
+  font-weight: 400;
+  margin: auto 0;
+}
+
+.space {
+  margin: 0 auto !important;
+}
+
+.instaripple {
+  height: 52px;
+  width: 52px;
+  border-radius: 50% !important;
+}
+
+.insta {
+  height: 52px !important;
+  width: 52px !important;
+  margin-right: 0 !important;
+}
+
+.navbar-brand {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 400;
+  font-size: 40px !important;
+  padding: 0;
+  margin-right: 0;
+  line-height: 48.79px;
+  height: 49px;
+  width: 296px;
+}
+
+.instagram-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 26px;
+}
+
+.description {
+  margin-top: 111px;
+  max-width: 520px;
+  height: 791px;
+  text-align: left !important;
+  margin-left: calc(100vw/12*2);
+  font-family: 'Quicksand', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 20px !important;
+  line-height: 25px !important;
+}
+
+.description-mask {
+
+}
+
+.nav-container {
+  height: 49px;
+  padding: 0;
+}
+
+.row {
+  min-width: 100vw;
 }
 
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  padding: 0 !important;
+  place-items: top;
+  min-width: 100vw;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.bg-image {
+  background-color: black;
+  height: 791px;
+  z-index: -1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+@media only screen and (max-width: 600px) {
+  .navbar-collapse {
+    min-height: 111px;
+    min-width: 100vw !important;
+    margin-left: -37px;
+    margin-top: 4px;
+    padding-right: 0 !important;
+    border-bottom: 5px solid #002A41;
+    background-color: #C5C5C5 !important;
+  }
+  
+  .navbar-collapse::before {
+    min-height: 111px;
+    min-width: 100vw;
+    padding-right: 0 !important;
+    border-bottom: 0px solid #002A41;
+    background-color: #C5C5C5 !important;
+  }
+  
+  .nav-container {
+    margin: 0 !important;
+  }
+  
+  .navibar {
+    min-height: 111px;
+    padding: 0 0 0 25px !important;
+    min-width: 100vw !important;
+    align-items: left !important;
+    border-bottom: 5px solid #002A41;
+    background-color: #C5C5C5 !important;
+  }
+  
+  .instaitem {
+    width: 52px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .nav-link {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 20px !important;
+    min-width: 133px;
+    font-weight: 400;
+    margin: auto 0;
+  }
+  
+  .space {
+    margin: 0 auto !important;
+  }
+  
+  .instaripple {
+    height: 52px;
+    width: 52px;
+    border-radius: 50% !important;
+  }
+
+  .insta-container {
+    height: 52px !important;
+    width: 100vw;
+    padding-right: 0 !important;
+    z-index: 0;
+    margin-bottom: 10px;
+  }
+  
+  .insta {
+    height: 52px !important;
+    width: 100vw !important;
+    right: 0;
+    margin-right: 0 !important;
+    z-index: 0 !important;
+    justify-content: center;
+  }
+  
+  .navbar-brand {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 400;
+    font-size: 40px !important;
+    padding: 0;
+    margin-right: 0;
+    line-height: 48.79px;
+    height: 49px;
+    width: 296px;
+  }
+  
+  .instagram-icon {
+    width: 52px;
+    height: 52px;
+    margin: 0;
+    border-radius: 26px;
+  }
+  
+  .nav-container {
+    height: 49px;
+    padding: 0;
+  }
+
 }
 
 @media (prefers-color-scheme: light) {
@@ -59,9 +243,11 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }

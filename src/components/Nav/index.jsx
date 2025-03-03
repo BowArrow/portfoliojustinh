@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { MDBNavbar, MDBNavbarBrand, MDBContainer, MDBRow, MDBCol, MDBDropdown, MDBDropdownItem, MDBDropdownMenu, MDBDropdownToggle, MDBNavbarToggler, MDBIcon, MDBCollapse, MDBNavbarNav, MDBNavbarItem } from "mdb-react-ui-kit";
+import { MDBNavbar, MDBNavbarBrand, MDBContainer, MDBRow, MDBCol, MDBDropdown, MDBDropdownItem, MDBDropdownMenu, MDBDropdownToggle, MDBNavbarToggler, MDBIcon, MDBCollapse, MDBNavbarNav, MDBNavbarItem, MDBRipple } from "mdb-react-ui-kit";
 import { Link } from 'react-router-dom';
 import './style.css';
+import instaicon from '../../assets/instagramicon.png'
 
 class Nav extends Component {
     state = {
@@ -9,21 +10,23 @@ class Nav extends Component {
     }
 
     render() {
-        return (
-            <MDBNavbar expand='lg' light bgColor='light'>
-                <MDBContainer fluid>
-                    <Link className='link-box' to='/'><MDBNavbarBrand>JUSTIN HOLTHOUSE</MDBNavbarBrand></Link>
+        const { openBasic } = this.state;
+
+        return ( 
+            <MDBNavbar expand="lg" className='navibar'>
+                <MDBContainer className='nav-container'>
+                    <MDBNavbarBrand href='/'>JUSTIN HOLTHOUSE</MDBNavbarBrand>
                     <MDBNavbarToggler
                         aria-controls='navBarSupportedContent'
                         aria-expanded='false'
                         aria-label='Toggle navigation'
-                        onClick={() => setOpenBasic(!openBasic)}
+                        onClick={() => this.setState({openBasic: !openBasic})}
                     >
                         <MDBIcon icon='bars' fas />
                     </MDBNavbarToggler>
     
-                    <MDBCollapse navbar open={openBasic}>
-                        <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
+                    {/* <MDBCollapse navbar open={openBasic}> */}
+                        <MDBNavbarNav className='mr-0 mb-2 mb-lg-0'>
                             <MDBNavbarItem>
                                 <Link className='link-box nav-link col-md-12' to='/'>Home</Link>
                             </MDBNavbarItem>
@@ -44,18 +47,13 @@ class Nav extends Component {
                                     </MDBDropdownMenu>
                                 </MDBDropdown>
                             </MDBNavbarItem>
+                            <MDBNavbarItem className='ms-auto insta-container'>
+                                <MDBNavbarBrand href='https://www.instagram.com/j.m.holthouse/' className='insta'><MDBRipple className='instaripple'><img className="instagram-icon" src={instaicon} alt="instagram"/></MDBRipple></MDBNavbarBrand>
+                            </MDBNavbarItem>
                         </MDBNavbarNav>
-                    </MDBCollapse>
+                    {/* </MDBCollapse> */}
                 </MDBContainer>
             </MDBNavbar>
-            // <>
-            //     <MDBRow className='navbar'>
-            //         <MDBCol md='12'>
-            //             <Link className='link-box col-md-12' to='/'>Home</Link>
-            //             <Link className='link-box col-md-12' to='/about'>About</Link>
-            //         </MDBCol>
-            //     </MDBRow>
-            // </>
         )
     }
 };

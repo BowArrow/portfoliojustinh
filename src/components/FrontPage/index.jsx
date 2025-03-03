@@ -14,8 +14,10 @@ class FrontPage extends Component {
     render() {
         return (
             <Router>
-                <Nav />
-                <MDBRow className='Pages'>
+                <MDBRow className="col-md-12">
+                    <Nav />
+                </MDBRow>
+                <MDBRow className='Pages col-md-12'>
                     <Routes>
                         <Route path='/' element={<Home />} />
                         <Route path='/about' element={<About />} />

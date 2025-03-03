@@ -1,9 +1,11 @@
 import React from "react";
-import Collection from '../Collection';
+import Collection from '../Collection/index.jsx';
 import { useParams } from "react-router-dom";
 
-export default CollectionWrapper = () => {
+const CollectionWrapper = () => {
     const {key} = useParams();
 
     return <Collection iKey={key} />
 }
+
+export default CollectionWrapper;
