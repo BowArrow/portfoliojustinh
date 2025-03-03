@@ -14,7 +14,8 @@ class Nav extends Component {
 
         return ( 
             <MDBNavbar expand="lg" className='navibar'>
-                <MDBContainer className='nav-container'>
+                <MDBContainer className='nav-container' fluid>
+                    <MDBCol md='2'></MDBCol>
                     <MDBNavbarBrand href='/'>JUSTIN HOLTHOUSE</MDBNavbarBrand>
                     <MDBNavbarToggler
                         aria-controls='navBarSupportedContent'
@@ -51,6 +52,7 @@ class Nav extends Component {
                                 <MDBNavbarBrand href='https://www.instagram.com/j.m.holthouse/' className='insta'><MDBRipple className='instaripple'><img className="instagram-icon" src={instaicon} alt="instagram"/></MDBRipple></MDBNavbarBrand>
                             </MDBNavbarItem>
                         </MDBNavbarNav>
+                        <MDBCol md='2'></MDBCol>
                     {/* </MDBCollapse> */}
                 </MDBContainer>
             </MDBNavbar>
