@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
+import { MDBContainer, MDBRow, MDBCol, MDBBtn } from 'mdb-react-ui-kit';
+import instaicon from '../../assets/instagramicon.png';
+import downloadicon from '../../assets/downloadicon.png';
 import './style.css'
 
 class About extends Component {
@@ -18,7 +20,7 @@ class About extends Component {
                         </MDBCol>
                         <MDBCol md='2'></MDBCol>
                     </MDBRow>
-                    <MDBRow className='about-content'>
+                    <MDBRow className='about-content mb-3'>
                         <MDBCol md='2'></MDBCol>
                         <MDBCol>
                             <div className='d-flex flex-column align-content-left about-content-container'>
@@ -36,8 +38,12 @@ class About extends Component {
                     </MDBRow>
                     <MDBRow className='about-content'>
                         <MDBCol md='2'></MDBCol>
-                        <MDBCol>
-
+                        <MDBCol md='2' className='px-0'>
+                            <MDBBtn className='about-btn d-flex align-items-center justify-content-center'><img className="about-icons" src={downloadicon} alt="CV/Resume"/><span className='ms-auto'>CV/Resume</span></MDBBtn>
+                        </MDBCol>
+                        <MDBCol></MDBCol>
+                        <MDBCol md='2' className='d-flex px-0'>
+                            <MDBBtn className='about-btn ms-auto d-flex align-items-center justify-content-center' href='https://www.instagram.com/j.m.holthouse/'><img className="about-icons" src={instaicon} alt="instagram"/><span className='ms-auto'>j.m.holthouse</span></MDBBtn>
                         </MDBCol>
                         <MDBCol md='2'></MDBCol>
                     </MDBRow>
